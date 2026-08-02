@@ -64,7 +64,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
 
-          {/* Protected Administration Routing */}
+          {/* Protected Administration Routing **/}
           <Route
             path="/dashboard"
             element={

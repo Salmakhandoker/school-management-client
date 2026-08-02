@@ -10,7 +10,7 @@ export const Register: React.FC = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState<'student' | 'teacher'>('student');
+  const [role, setRole] = useState<'student' | 'teacher' | 'admin'>('student');
   const [avatar, setAvatar] = useState('');
   
   const [error, setError] = useState('');
@@ -58,7 +58,7 @@ export const Register: React.FC = () => {
             <span>EduSphere</span>
           </Link>
           <h2 class="text-xl font-extrabold text-slate-900">Create Account</h2>
-          <p class="text-xs text-slate-500">Register as a Student or Teacher to access class systems</p>
+          <p class="text-xs text-slate-500">Register as an Admin, Teacher, or Student to access portal systems</p>
         </div>
 
         {/* Error Alert Box */}
@@ -138,11 +138,11 @@ export const Register: React.FC = () => {
           {/* Role Choice */}
           <div class="space-y-1">
             <label class="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-1">Select Account Type *</label>
-            <div class="grid grid-cols-2 gap-3">
+            <div class="grid grid-cols-3 gap-2">
               <button
                 type="button"
                 onClick={() => setRole('student')}
-                class={`py-2.5 rounded-xl text-xs font-bold border transition-all ${
+                class={`py-2.5 rounded-xl text-[11px] font-bold border transition-all ${
                   role === 'student'
                     ? 'bg-primary/10 border-primary text-primary'
                     : 'bg-slate-50 border-slate-100 text-slate-500 hover:bg-slate-100'
@@ -153,13 +153,24 @@ export const Register: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setRole('teacher')}
-                class={`py-2.5 rounded-xl text-xs font-bold border transition-all ${
+                class={`py-2.5 rounded-xl text-[11px] font-bold border transition-all ${
                   role === 'teacher'
                     ? 'bg-primary/10 border-primary text-primary'
                     : 'bg-slate-50 border-slate-100 text-slate-500 hover:bg-slate-100'
                 }`}
               >
                 Teacher
+              </button>
+              <button
+                type="button"
+                onClick={() => setRole('admin')}
+                class={`py-2.5 rounded-xl text-[11px] font-bold border transition-all ${
+                  role === 'admin'
+                    ? 'bg-primary/10 border-primary text-primary'
+                    : 'bg-slate-50 border-slate-100 text-slate-500 hover:bg-slate-100'
+                }`}
+              >
+                Admin
               </button>
             </div>
           </div>

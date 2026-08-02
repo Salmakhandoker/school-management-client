@@ -134,39 +134,6 @@ export const Login: React.FC = () => {
           </button>
         </form>
 
-        {/* Separator line */}
-        <div class="relative flex items-center justify-center my-4">
-          <div class="absolute inset-0 flex items-center">
-            <div class="w-full border-t border-slate-100"></div>
-          </div>
-          <span class="relative px-3 bg-white text-[10px] uppercase font-bold text-slate-400">Quick Demo Logins</span>
-        </div>
-
-        {/* Quick Demo Access controls */}
-        <div class="grid grid-cols-3 gap-2">
-          <button
-            onClick={() => handleDemoFill('admin')}
-            class="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-[10px] font-bold py-2.5 rounded-xl border border-indigo-100 transition-colors flex flex-col items-center space-y-1"
-          >
-            <User class="w-4 h-4" />
-            <span>Admin</span>
-          </button>
-          <button
-            onClick={() => handleDemoFill('teacher')}
-            class="bg-cyan-50 hover:bg-cyan-100 text-cyan-700 text-[10px] font-bold py-2.5 rounded-xl border border-cyan-100 transition-colors flex flex-col items-center space-y-1"
-          >
-            <User class="w-4 h-4" />
-            <span>Teacher</span>
-          </button>
-          <button
-            onClick={() => handleDemoFill('student')}
-            class="bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-[10px] font-bold py-2.5 rounded-xl border border-emerald-100 transition-colors flex flex-col items-center space-y-1"
-          >
-            <User class="w-4 h-4" />
-            <span>Student</span>
-          </button>
-        </div>
-
         {/* Redirect toggle */}
         <p class="text-xs text-center text-slate-500">
           New to EduSphere?{' '}
